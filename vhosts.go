@@ -63,6 +63,9 @@ type VhostInfo struct {
 	Tags VhostTags `json:"tags"`
 	// True if tracing is enabled for this virtual host
 	Tracing bool `json:"tracing"`
+	// Default queue type, can be undefined, classic, quorum or stream
+	DefaultQueueType string `json:"default_queue_type"`
+
 
 	// Total number of messages in queues of this virtual host
 	Messages        int         `json:"messages"`
@@ -163,6 +166,8 @@ type VhostSettings struct {
 	Tags VhostTags `json:"tags"`
 	// True if tracing should be enabled.
 	Tracing bool `json:"tracing"`
+	// Default queue type, can be undefined, classic, quorum or stream
+	DefaultQueueType string `json:"default_queue_type"`
 }
 
 // PutVhost creates or updates a virtual host.
